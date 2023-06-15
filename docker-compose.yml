@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  dbeaver-password-decrypt:
+    image: dbeaver-password-decrypt
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: dbeaver-password-decrypt
+    restart: unless-stopped
+    ports:
+      - 9001:80
+    volumes:
+      - ./:/var/www/html
