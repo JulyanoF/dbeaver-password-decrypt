@@ -1,6 +1,5 @@
 <?php
 if ($_FILES) {
-    echo '<pre>';
     $filename = md5(microtime()) . '.json';
     if (!move_uploaded_file($_FILES['credentials']['tmp_name'], $filename)) {
         die('Something wrong is not write');
